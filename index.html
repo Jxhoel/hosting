@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de CV</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="flex-container">
+  
+    <div id="cv-form">
+    <h1>Generador de CV</h1>
+  
+    <section>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Nombre Apellido">
+    </section>
+
+    <section>
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" placeholder="tucorreo@example.com">
+    </section>
+
+    <section>
+      <label for="dni">DNI:</label>
+      <input type="text" id="dni" placeholder="xx.xxx.xxx">
+    </section>
+
+    <section>
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" placeholder="Número de teléfono">
+    </section>
+
+    <section>
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" placeholder="Tu dirección">
+    </section>
+
+    <section>
+      <label for="experiencias">Experiencias Laborales:</label>
+      <textarea id="experiencias" placeholder="Detalla tus experiencias laborales"></textarea>
+    </section>
+
+    <section>
+      <label for="estudios">Estudios:</label>
+      <textarea id="estudios" placeholder="Detalla tu historial educativo"></textarea>
+    </section>
+
+    <section>
+      <label for="foto">Foto (pequeña):</label>
+      <input type="file" id="foto" accept="image/*" style="display: none;">
+      <button type="button" onclick="seleccionarFoto()">Seleccionar Foto</button>
+     
+      <button onclick="generarCV()">Generar CV</button>
+      
+    
+
+    </section>
+  
+  </div>
+
+  <div id="cv-preview">
+    <!-- Vista previa del CV generada por JavaScript -->
+  </div>
+</div>
+
+
+
+  <script src="proyecto.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+</body>
+</html>
